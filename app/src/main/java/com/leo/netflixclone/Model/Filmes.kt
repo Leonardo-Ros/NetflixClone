@@ -1,0 +1,56 @@
+package com.leo.netflixclone.Model
+
+import com.leo.netflixclone.R
+
+data class Filmes (
+     val capaFilme: Int
+         )
+
+class FilmesBuilder{
+
+    var capaFilme: Int = 0
+    fun build(): Filmes = Filmes (capaFilme)
+
+}
+
+fun filmes(block: FilmesBuilder.() -> Unit): Filmes = FilmesBuilder().apply(block).build()
+
+fun addfilmes(): MutableList <Filmes> = mutableListOf(
+
+    filmes {
+    capaFilme = R.drawable.filme13
+ },
+    filmes {
+        capaFilme = R.drawable.filme2
+    },
+    filmes {
+        capaFilme = R.drawable.filme3
+    },
+    filmes {
+        capaFilme = R.drawable.filme4
+    },
+    filmes {
+        capaFilme = R.drawable.filme5
+    },
+    filmes {
+        capaFilme = R.drawable.filme6
+    },
+    filmes {
+        capaFilme = R.drawable.filme7
+    },
+    filmes {
+        capaFilme = R.drawable.filme8
+    },
+    filmes {
+        capaFilme = R.drawable.filme9
+    },
+    filmes {
+        capaFilme = R.drawable.filme10
+    },
+    filmes {
+        capaFilme = R.drawable.filme11
+    },
+    filmes {
+        capaFilme = R.drawable.filme12
+    }
+)
